@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iman Alee | Personal Website</title>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(135deg, #0f0f0f, #1c1c1c, #0f0f0f);
+        color: #fff;
+        line-height: 1.6;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        text-align: center;
+        padding: 50px 20px;
+    }
+
+    header h1 {
+        font-size: 3rem;
+        color: #ff4081;
+        text-shadow: 0 0 15px #ff4081, 0 0 30px rgba(255,64,129,0.4);
+    }
+
+    header p {
+        font-size: 1.1rem;
+        color: #bbb;
+    }
+
+    .container {
+        width: 90%;
+        max-width: 900px;
+        margin: 20px auto;
+        flex: 1;
+    }
+
+    section {
+        background: rgba(31,31,31,0.95);
+        margin: 20px 0;
+        padding: 20px;
+        border-radius: 14px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+        transition: transform 0.3s ease, background 0.3s ease;
+    }
+
+    section:hover {
+        transform: scale(1.02);
+        background: rgba(45,45,45,0.95);
+    }
+
+    h2 {
+        color: #ff4081;
+        margin-bottom: 15px;
+        text-shadow: 0 0 8px #ff4081;
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    ul li {
+        background: #2a2a2a;
+        margin: 8px 0;
+        padding: 10px;
+        border-radius: 8px;
+        transition: background 0.3s ease;
+    }
+
+    ul li:hover {
+        background: #333;
+    }
+
+    button {
+        display: block;
+        margin: 15px auto;
+        padding: 10px 20px;
+        background: #ff4081;
+        border: none;
+        color: #fff;
+        font-size: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    button:hover {
+        background: #ff5c93;
+        transform: scale(1.05);
+    }
+
+    footer {
+        text-align: center;
+        padding: 15px;
+        font-size: 0.9rem;
+        color: #666;
+        border-top: 1px solid #333;
+        margin-top: auto;
+    }
+
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 2.2rem;
+        }
+        header p {
+            font-size: 1rem;
+        }
+    }
+
+    @media (max-width: 480px) {
+        header h1 {
+            font-size: 1.8rem;
+        }
+        section {
+            padding: 15px;
+        }
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Iman Alee</h1>
+    <p>Age: 17 | Birthday: June 15 | Contact: +92XXXXXXXXXX</p>
+</header>
+
+<div class="container">
+    <section>
+        <h2>About Me</h2>
+        <p>I’m a student at Lahore Grammar School, passionate about tech, art, and food. Currently in A-Levels, living life one adventure at a time!  
+        I love <strong>Daal Chawal</strong> and I absolutely love <strong>ChatGPT</strong> ❤️</p>
+    </section>
+
+    <section>
+        <h2>Hobbies & Interests</h2>
+        <ul>
+            <li>Playing Throwball 🏐</li>
+            <li>Painting 🎨</li>
+            <li>Doing Math ➗</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Favorite Food Spots</h2>
+        <ul>
+            <li><strong>Sumo</strong> - Best sushi spot in town 🍣</li>
+            <li><strong>Seven Sides</strong> - Cozy and modern ☕</li>
+            <li><strong>Badminton Café</strong> - Perfect for post-game bites 🍴</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Fun Facts About Me</h2>
+        <p id="funFact">I can eat sushi every day!</p>
+        <button onclick="randomFact()">Show Another Fun Fact</button>
+    </section>
+</div>
+
+<footer>
+    <p>© 2025 Iman Alee | Made with ❤️</p>
+</footer>
+
+<script>
+    const funFacts = [
+        "I believe coffee is an emotion, not a drink ☕",
+        "I’m obsessed with tech innovations 💻",
+        "I can eat sushi every day 🍣",
+        "Math is my happy place ➕",
+        "Throwball is my stress buster 🏐",
+        "I love ChatGPT 🤖",
+        "Daal Chawal is my comfort food 🍛"
+    ];
+    function randomFact() {
+        const fact = funFacts[Math.floor(Math.random() * funFacts.length)];
+        document.getElementById("funFact").innerText = fact;
+    }
+</script>
+</body>
+</html>
